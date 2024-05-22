@@ -4,8 +4,9 @@
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "@linthtml/linthtml": "0.9.6",
     "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "^0.1.11"
+    "stylelint-config-htmlacademy": "0.1.11"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -18,6 +19,11 @@
     "*.json",
     "source/*.html"
   ],
+  "linthtmlConfig": {
+    "rules": {
+      "indent-style": "off"
+    }
+  },
   "engines": {
     "node": "^16"
   },

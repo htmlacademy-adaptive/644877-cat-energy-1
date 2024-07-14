@@ -4,29 +4,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page__body">
     <header class="main-header">
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип кот-супергерой">
+        <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип Кэт энерджи">
+      </a>
       <nav class="main-navigation">
-        <a class="main-header__logo">
-          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип кот-супергерой">
-          <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип Кэт энерджи">
-        </a>
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            Главная
+            <a class="main-navigation__link" href="index.html">
+              Главная
+            </a>
           </li>
           <li class="main-navigation__item">
-            <a href="catalog.html">
+            <a class="main-navigation__link" href="catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="main-navigation__item">
-            <a href="form.html">
+            <a class="main-navigation__link main-navigation__link--current" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -35,11 +38,10 @@
     </header>
     <main class="page__main">
       <section class="page__content">
-
-        <h1 class="page-title">
+        <h1 class="page__title">
           Подбор программы
         </h1>
-        <p class="page-description">
+        <p class="page__description">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
@@ -51,11 +53,11 @@
             </label>
             <label class="form__label">
               Вес (кг):*
-              <input class="form__input" type="text" name="weight" value="7" placeholder="5" required>
+              <input class="form__input" type="text" name="weight" value="" placeholder="5" required>
             </label>
             <label class="form__label">
               Возраст (лет):
-              <input class="form__input" type="text" name="age" value="7" placeholder="5">
+              <input class="form__input" type="text" name="age" value="" placeholder="5">
             </label>
           </fieldset>
           <fieldset class="form__fieldset">
@@ -80,11 +82,11 @@
             </h3>
             <label class="form__label form__label--email">
               E-mail:*
-              <input class="form__input" type="email" name="owner-email" value="kuklachev@gmail.com" placeholder="ivanov@gmail.com" required>
+              <input class="form__input" type="email" name="owner-email" value="" placeholder="ivanov@gmail.com" required>
             </label>
             <label class="form__label form__label--phone">
               Телефон:*
-              <input class="form__input" type="text" name="owner-phone" value="8 (960) 900-60-90" placeholder="8 (858)858-85-85">
+              <input class="form__input" type="text" name="owner-phone" value="" placeholder="8 (858)858-85-85">
             </label>
           </fieldset>
           <fieldset class="form__fieldset">
@@ -99,12 +101,10 @@
               <input class="visually-hidden form__input" type="checkbox" name="extra" value="" checked>
               Сахарозаменитель
             </label>
-
             <label class="form__checkbox">
               <input class="visually-hidden form__input" type="checkbox" name="water">
               Питьевая вода
             </label>
-
             <label class="form__checkbox">
               <input class="visually-hidden form__input" type="checkbox" name="milk">
               Молоко
@@ -123,7 +123,7 @@
     </main>
     <footer class="main-footer">
       <section class="main-footer__contacts contacts">
-        <h2 class="visually-hidden">Контакты</h2>
+        <h2 class="visually-hidden ">Контакты</h2>
         <div class="contacts__adress adress">
           <h3 class="adress__title">Приглашаем к сотрудничеству дилеров!</h3>
           <span class="adress__description">ул. Большая

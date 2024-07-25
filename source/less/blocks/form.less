@@ -1,26 +1,86 @@
+.form__hero {
+  padding: 0 20px;
+}
+
 .form__fieldset {
-  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 20px 24px;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0;
+  min-width: unset;
 }
 
 .form__label {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  gap: 13px;
   font-size: 16px;
   line-height: 18px;
+  text-transform: uppercase;
   color: #444444;
 }
 
 .form__input {
+  flex: 1;
+  height: 45px;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
 }
 
-.form__note {
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
+.form__fieldset--goal {
+  padding: 22px 20px 19px;
+}
+
+.form__fieldset--contacts {
+  padding: 26px 20px;
+  border: none;
+}
+
+.form__label--email {
+  margin-top: 35px;
+}
+
+.form__fieldset--comment,
+.form__fieldset--extra {
+  border-bottom: none;
+}
+
+.form__fieldset--extra {
+  padding-bottom: 0;
+}
+
+.form__textarea {
+  margin-top: 38px;
+  margin-bottom: 23px;
+  width: 280px;
+  height: 150px;
+  resize: none;
+}
+
+.form__checkbox {
+  text-transform: uppercase;
+}
+
+.form__checkbox--first {
+  margin-top: 21px;
 }
 
 .form__button {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin: 20px 0 21px;
+}
+
+.form__note {
+  display: block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }

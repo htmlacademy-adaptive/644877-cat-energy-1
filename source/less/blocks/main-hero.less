@@ -1,5 +1,5 @@
 .main-hero {
-  padding: 27px 20px 20px;
+  padding: 27px 0 20px;
   background-image: url("../img/index-bg-image.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -10,20 +10,6 @@
   color: #ffffff;
 }
 
-@media (min-width: @tablet-width) {
-  .main-hero {
-    margin: 0 30px;
-    padding: 65px 200px 526px 90px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-hero {
-    margin: 0 110px;
-    padding: 110px 80px 184px;
-  }
-}
-
 .main-hero__title {
   margin: 0;
   margin-bottom: 25px;
@@ -32,50 +18,12 @@
   line-height: 36px;
 }
 
-@media (min-width: @tablet-width) {
-  .main-hero__title {
-    margin-top: 65px;
-    margin-bottom: 40px;
-    font-size: 60px;
-    line-height: 60px;
-    color: #000000;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-hero__title {
-    margin-top: 110px;
-    font-size: 60px;
-    line-height: 60px;
-    color: #000000;
-  }
-}
-
-
 .main-hero__description {
   margin: 0;
   margin-bottom: 29px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-}
-
-@media (min-width: @tablet-width) {
-  .main-hero__description {
-    margin-bottom: 50px;
-    font-size: 20px;
-    line-height: 20px;
-    color: #000000;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-hero__description {
-    margin-bottom: 52px;
-    font-size: 20px;
-    line-height: 20px;
-    color: #000000;
-  }
 }
 
 .main-hero__choose-button {
@@ -86,8 +34,26 @@
   text-decoration: none;
 }
 
-
 @media (min-width: @tablet-width) {
+  .main-hero {
+    padding: 65px 200px 526px 90px;
+  }
+
+  .main-hero__title {
+    margin-top: 65px;
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+  }
+
+  .main-hero__description {
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+
   .main-hero__choose-button {
     font-size: 20px;
     line-height: 26px;
@@ -95,6 +61,24 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-hero {
+    padding: 110px 80px 184px;
+  }
+
+  .main-hero__title {
+    margin-top: 110px;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+  }
+
+  .main-hero__description {
+    margin-bottom: 52px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+
   .main-hero__choose-button {
     font-size: 20px;
     line-height: 26px;

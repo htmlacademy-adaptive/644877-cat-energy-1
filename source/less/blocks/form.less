@@ -1,17 +1,5 @@
 .form {
-  padding: 0 20px 32px;
-}
-
-@media (min-width: @tablet-width) {
-  .form {
-    padding: 0 70px 60px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form {
-    padding: 0 110px 79px;
-  }
+  padding-bottom: 32px;
 }
 
 .form__fieldset {
@@ -22,18 +10,6 @@
   margin: 0;
   border: none;
   min-width: unset;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset {
-    padding-top: 65px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset {
-    padding-top: 70px;
-  }
 }
 
 .form__label {
@@ -47,40 +23,14 @@
   color: #444444;
 }
 
-@media (min-width: @tablet-width) {
-  .form__label {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__label {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
 .form__input {
   flex: 1;
   height: 45px;
+  font-family: inherit;
   font-size: 16px;
   line-height: 18px;
+  text-transform: uppercase;
   color: #444444;
-}
-
-@media (min-width: @tablet-width) {
-  .form__input {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__input {
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
 
 .form__cat-info {
@@ -89,48 +39,13 @@
   gap: 24px;
 }
 
-@media (min-width: @tablet-width) {
-  .form__cat-info {
-    gap: 72px;
-  }
-
-  .form__fieldset--cat {
-    flex: 1;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__cat-info {
-    flex-direction: row;
-    gap: 80px;
-  }
-
-  .form__fieldset--goal {
-    flex: 1;
-  }
-}
-
 .form__fieldset--goal {
   padding: 22px 0 19px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--goal {
-    padding: 23px 27px 27px;
-    border: 1px solid #e7e7e7;
-  }
 }
 
 .form__fieldset--contacts {
   padding-top: 26px;
   gap: 35px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--contacts {
-    gap: 76px;
-    padding-bottom: 0;
-  }
 }
 
 .form__contacts {
@@ -139,53 +54,21 @@
   gap: 14px;
 }
 
-@media (min-width: @tablet-width) {
-  .form__contacts {
-    gap: 20px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__contacts {
-    flex-direction: row;
-    gap: 81px;
-  }
-}
-
-
-@media (min-width: @desktop-width) {
-  .form__label--email {
-    flex: 1;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__label--phone {
-    flex: 1;
-  }
-}
-
 .form__fieldset--comment {
   padding-top: 24px;
   gap: 38px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--comment {
-    gap: 87px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset--comment {
-    gap: 78px;
-  }
 }
 
 .form__textarea {
   min-width: 280px;
   min-height: 150px;
   resize: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
 }
 
 .form__fieldset--extra {
@@ -193,29 +76,8 @@
   gap: 34px;
 }
 
-@media (min-width: @tablet-width) {
-  .form__fieldset--extra {
-    gap: 57px;
-  }
-}
-
 .form__checkbox {
   text-transform: uppercase;
-}
-
-@media (min-width: @tablet-width) {
-  .form__checkbox-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 32px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__checkbox-list {
-    grid-auto-flow: column;
-    grid-template-columns: unset;
-  }
 }
 
 .form__submit {
@@ -226,35 +88,8 @@
   gap: 21px;
 }
 
-@media (min-width: @tablet-width) {
-  .form__submit {
-    margin-top: 52px;
-    flex-direction: row;
-    gap: 60px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__submit {
-    margin-top: 60px;
-    gap: 80px;
-  }
-}
-
 .form__button {
   width: 100%;
-}
-
-@media (min-width: @tablet-width) {
-  .form__button {
-    width: 284px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__button {
-    width: 570px;
-  }
 }
 
 .form__note {
@@ -267,20 +102,6 @@
   text-align: center;
 }
 
-
-@media (min-width: @tablet-width) {
-  .form__note {
-    font-size: 16px;
-    width: auto;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__note {
-    font-size: 16px;
-  }
-}
-
 .form__fieldset-title {
   margin: 0;
   font-size: 24px;
@@ -288,8 +109,146 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form {
+    padding: 0 40px 60px;
+  }
+
+  .form__fieldset {
+    padding-top: 65px;
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__input {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__cat-info {
+    gap: 72px;
+  }
+
+  .form__fieldset--cat {
+    flex: 1;
+  }
+
+  .form__fieldset--goal {
+    padding: 23px 27px 27px;
+    border: 1px solid #e7e7e7;
+  }
+
+  .form__fieldset--contacts {
+    gap: 76px;
+    padding-bottom: 0;
+  }
+
+  .form__contacts {
+    gap: 20px;
+  }
+
+  .form__fieldset--comment {
+    gap: 87px;
+  }
+
+  .form__textarea {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__fieldset--extra {
+    gap: 57px;
+  }
+
+  .form__checkbox-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+  }
+
+  .form__submit {
+    margin-top: 52px;
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .form__button {
+    width: 284px;
+  }
+
+  .form__note {
+    font-size: 16px;
+    width: auto;
+  }
+
   .form__fieldset-title {
     font-size: 36px;
     line-height: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    padding: 0 0 79px;
+  }
+
+  .form__fieldset {
+    padding-top: 70px;
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__input {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__cat-info {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  .form__fieldset--goal {
+    flex: 1;
+  }
+
+  .form__label--email {
+    flex: 1;
+  }
+
+  .form__label--phone {
+    flex: 1;
+  }
+
+  .form__contacts {
+    flex-direction: row;
+    gap: 81px;
+  }
+
+  .form__fieldset--comment {
+    gap: 78px;
+  }
+
+  .form__checkbox-list {
+    grid-auto-flow: column;
+    grid-template-columns: unset;
+  }
+
+  .form__submit {
+    margin-top: 60px;
+    gap: 80px;
+  }
+
+  .form__button {
+    width: 570px;
+  }
+
+  .form__note {
+    font-size: 16px;
   }
 }

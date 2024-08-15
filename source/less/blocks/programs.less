@@ -1,20 +1,5 @@
 .programs {
   margin-top: 20px;
-  padding: 0 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .programs {
-    margin-top: 45px;
-    padding: 0 30px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .programs {
-    margin-top: 71px;
-    padding: 0 110px;
-  }
 }
 
 .programs__list {
@@ -32,39 +17,11 @@
   background-color: #f2f2f2;
 }
 
-@media (min-width: @tablet-width) {
-  .programs-item {
-    padding: 77px 316px 53px 53px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .programs-item {
-    padding: 77px 61px 55px 52px;
-  }
-}
-
 .programs__title {
   margin: 0 0 30px 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-}
-
-@media (min-width: @tablet-width) {
-  .programs__title {
-    margin: 0 0 24px;
-    font-size: 36px;
-    line-height: 36px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .programs__title {
-    margin-bottom: 73px;
-    font-size: 36px;
-    line-height: 36px;
-  }
 }
 
 .programs__description {
@@ -74,20 +31,6 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-}
-
-@media (min-width: @tablet-width) {
-  .programs__description {
-    margin-bottom: 48px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .programs__description {
-    margin-bottom: 23px;
-  }
 }
 
 .programs__button {
@@ -100,8 +43,54 @@
 }
 
 @media (min-width: @tablet-width) {
+  .programs {
+    margin-top: 45px;
+  }
+
+  .programs-item {
+    padding: 77px 316px 53px 53px;
+  }
+
+  .programs__title {
+    margin: 0 0 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .programs__description {
+    margin-bottom: 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .programs__button {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    margin-top: 71px;
+  }
+
+  .programs__list {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  .programs__item {
+    flex: 1;
+    padding: 77px 61px 55px 52px;
+  }
+
+  .programs__title {
+    margin-bottom: 73px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .programs__description {
+    margin-bottom: 23px;
   }
 }

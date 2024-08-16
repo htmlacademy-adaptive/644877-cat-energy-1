@@ -1,0 +1,147 @@
+.extra {
+  padding: 25px 0 35px;
+}
+
+.extra__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.extra__container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.extra__list {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.extra__item {
+  padding: 13px 0 19px;
+  border-top: 1px solid #cdcdcd;
+}
+
+.extra__item:last-child {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.extra__item-title {
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.extra__params {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.extra__quantity {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+}
+
+.extra__price {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.extra__button {
+  width: 100%;
+}
+
+.extra__promo {
+  text-align: center;
+  color: #ffffff;
+  height: 290px;
+  padding: 187px 60px 43px;
+  background-image: url("../img/cat-bag.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.extra__promo-text {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra {
+    padding: 70px 0 75px;
+  }
+
+  .extra__title {
+    margin-bottom: 80px;
+    margin-left: 40px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .extra__container {
+    gap: 70px;
+  }
+
+  .extra__item-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra__quantity {
+    font-size: 16px;
+  }
+
+  .extra__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extra__promo-text {
+    padding: 71px 125px 69px 421px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra {
+    padding: 76px 0 87px;
+  }
+
+  .extra__title {
+    margin-left: 0;
+  }
+
+  .extra__container {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  .extra__item-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra__quantity {
+    font-size: 16px;
+  }
+
+  .extra__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

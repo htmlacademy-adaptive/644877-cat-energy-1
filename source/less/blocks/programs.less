@@ -12,19 +12,34 @@
 }
 
 .programs__item {
-  padding: 20px;
-  padding-right: 33px;
+  position: relative;
+  padding: 30px 33px 18px 20px;
   background-color: #f2f2f2;
 }
 
 .programs__title {
-  margin: 0 0 30px 70px;
+  margin: 0 0 29px 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 }
 
+.programs__item-icon {
+  position: absolute;
+  top: 21px;
+  left: 20px;
+}
+
+.programs__item-icon--large {
+  position: absolute;
+  top: 24px;
+  left: 13px;
+  width: 67px;
+  height: 50px;
+}
+
 .programs__description {
+  position: relative;
   margin: 0;
   margin-bottom: 38px;
   font-family: "Lato", sans-serif;
@@ -33,13 +48,43 @@
   color: #444444;
 }
 
+.programs__description::after {
+  content: " ";
+  position: absolute;
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+  left: 0;
+  bottom: -23px;
+}
+
 .programs__button {
-  display: block;
+  position: relative;
+  display: flex;
+  gap: 15px;
+  align-items: center;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.programs__button::after {
+  content: " ";
+  position: absolute;
+  width: 32px;
+  height: 12px;
+  top: 7px;
+  right: 95px;
+  background-image: url("../img/arrow.svg");
+}
+
+.programs__button:hover::after {
+  background-image: url("../img/arrow-hover.svg");
 }
 
 @media (min-width: @tablet-width) {
@@ -47,8 +92,8 @@
     margin-top: 45px;
   }
 
-  .programs-item {
-    padding: 77px 316px 53px 53px;
+  .programs__item {
+    padding: 77px 63px 53px 53px;
   }
 
   .programs__title {
@@ -61,17 +106,38 @@
     margin-bottom: 48px;
     font-size: 16px;
     line-height: 24px;
+    display: block;
+    width: 340px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .programs__item-icon {
+    top: 81px;
+    left: 445px;
+    width: 200px;
+    height: 211px;
+  }
+
+  .programs__item-icon--large {
+    top: 91px;
+    left: 407px;
+    width: 268px;
+    height: 200px;
   }
 
   .programs__button {
     font-size: 20px;
     line-height: 30px;
+    min-height: 38px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .programs {
-    margin-top: 71px;
+    margin-top: 82px;
   }
 
   .programs__list {
@@ -86,11 +152,27 @@
 
   .programs__title {
     margin-bottom: 73px;
+    margin-left: 162px;
     font-size: 36px;
     line-height: 36px;
   }
 
   .programs__description {
     margin-bottom: 23px;
+    min-width: 457px;
+  }
+
+  .programs__item-icon {
+    top: 41px;
+    left: 52px;
+    width: 100px;
+    height: 106px;
+  }
+
+  .programs__item-icon--large {
+    top: 47px;
+    left: 33px;
+    width: 134px;
+    height: 100px;
   }
 }

@@ -1,11 +1,7 @@
 .main-hero {
-  padding: 27px 0 20px;
-  background-image: url("../img/index-bg-image.jpg");
+  padding-top: 27px;
+  background: linear-gradient(rgba(104, 183, 56, 0.85) 300px, #ffffff 300px), url("../img/index-bg-image.jpg") no-repeat;
   background-size: 100%;
-  background-repeat: no-repeat;
-  //background-color: #68b738;
-  //opacity: 0.25;//
-  background-blend-mode: overlay;
   text-align: center;
   color: #ffffff;
 }
@@ -26,6 +22,10 @@
   text-transform: uppercase;
 }
 
+.main-hero__image {
+  display: block;
+}
+
 .main-hero__choose-button {
   display: block;
   font-size: 16px;
@@ -36,37 +36,74 @@
 
 @media (min-width: @tablet-width) {
   .main-hero {
-    padding: 65px 200px 526px 90px;
+    padding: 65px 0 0;
+    background-image: none;
+  }
+
+  .main-hero__wrapper {
+    padding-left: 90px;
+    position: relative;
   }
 
   .main-hero__title {
-    margin-top: 65px;
     margin-bottom: 40px;
     font-size: 60px;
     line-height: 60px;
+    text-align: left;
     color: #000000;
   }
 
   .main-hero__description {
     margin-bottom: 50px;
     font-size: 20px;
+    font-weight: 400;
     line-height: 20px;
+    text-align: left;
     color: #000000;
   }
 
   .main-hero__choose-button {
+    padding: 14px 26px;
+    margin-bottom: 526px;
+    min-height: 54px;
+    max-width: 244px;
     font-size: 20px;
     line-height: 26px;
+  }
+
+  .main-hero__image {
+    position: absolute;
+    width: 709px;
+    height: 609px;
+    top: 206px;
+    right: 0;
+    z-index: -1;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-hero {
-    padding: 110px 80px 184px;
+    position: relative;
+    padding: 110px 80px 0;
+  }
+
+  .main-hero__wrapper {
+    padding-left: 80px;
+    padding-bottom: 184px;
+  }
+
+  .main-hero__wrapper::before {
+    position: absolute;
+    content: " ";
+    width: 720px;
+    height: 694px;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-bg-image.jpg") no-repeat;
+    top: -219px;
+    left: 610px;
+    z-index: -1;
   }
 
   .main-hero__title {
-    margin-top: 110px;
     font-size: 60px;
     line-height: 60px;
     color: #000000;
@@ -80,7 +117,15 @@
   }
 
   .main-hero__choose-button {
-    font-size: 20px;
     line-height: 26px;
+    margin-bottom: 0;
+  }
+
+  .main-hero__image {
+    width: 552px;
+    height: 499px;
+    top: -81px;
+    left: 447px;
+    z-index: -1;
   }
 }

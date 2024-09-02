@@ -1,6 +1,5 @@
 .copyright {
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: space-between;
 }
@@ -11,6 +10,22 @@
   font-size: 16px;
   line-height: 20px;
   color: #444444;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.copyright__link path {
+  fill: #666666;
+}
+
+.copyright__link:hover path,
+.copyright__link:active path {
+  fill: #68b738;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

@@ -17,6 +17,7 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+  background-color: inherit;
 }
 
 .example__container {
@@ -38,6 +39,7 @@
 @media (min-width: @tablet-width) {
   .example {
     padding: 45px 0 101px;
+    background: linear-gradient(#ffffff 462px, #eaeaea 462px);
   }
 
   .example__title {
@@ -70,12 +72,9 @@
 
 @media (min-width: @desktop-width) {
   .example {
+    padding: 0;
     padding-bottom: 75px;
-  }
-
-  .example__wrapper {
-    display: grid;
-    grid-template-columns: repeat(1fr 1fr);
+    background: linear-gradient(#ffffff 136px, #f2f2f2 136px);
   }
 
   .example__title {

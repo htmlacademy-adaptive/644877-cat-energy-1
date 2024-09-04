@@ -19,7 +19,6 @@
 }
 
 .advantages__description {
-  position: relative;
   margin: 0;
   min-height: 60px;
   padding-left: 80px;
@@ -30,12 +29,35 @@
   white-space: collapse;
 }
 
-.advantages__icon {
+.advantages__item {
+  position: relative;
+}
+
+.advantages__item::before {
   position: absolute;
+  content: " ";
   top: 0;
   left: 0;
   width: 60px;
   height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.advantages__item--benefit::before {
+  background-image: url("../img/leaf.svg");
+}
+
+.advantages__item--powder::before {
+  background-image: url("../img/water.svg");
+}
+
+.advantages__item--feed::before {
+  background-image: url("../img/fork-knife.svg");
+}
+
+.advantages__item--result::before {
+  background-image: url("../img/clock.svg");
 }
 
 @media (min-width: @tablet-width) {
@@ -62,8 +84,10 @@
   }
 
 
-  .advantages__item::before {
+  .advantages__item::after {
     position: absolute;
+    top: 0;
+    z-index: -1;
     counter-increment: advantages;
     content: counter(advantages);
     color: #f2f2f2;
@@ -78,7 +102,10 @@
     line-height: 24px;
   }
 
-  .advantages__icon {
+  .advantages__item--benefit::before,
+  .advantages__item--feed::before,
+  .advantages__item--powder::before,
+  .advantages__item--result::before {
     width: 80px;
     height: 80px;
     top: 40px;

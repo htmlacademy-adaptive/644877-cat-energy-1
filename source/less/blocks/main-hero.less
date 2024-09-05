@@ -36,7 +36,7 @@
 
 @media (min-width: @tablet-width) {
   .main-hero {
-    padding: 65px 0 0;
+    padding: 65px 0 0 90px;
     background-image: none;
   }
 
@@ -76,7 +76,8 @@
     width: 709px;
     height: 609px;
     top: 206px;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: -1;
   }
 }
@@ -99,7 +100,7 @@
     height: 694px;
     background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-background-desktop.jpg") no-repeat;
     top: -219px;
-    left: 610px;
+    left: 50%;
     z-index: -1;
     background-size: cover;
   }

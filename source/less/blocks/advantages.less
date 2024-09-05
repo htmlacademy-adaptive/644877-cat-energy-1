@@ -74,12 +74,14 @@
 
   .advantages__list {
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 37px;
+    grid-column-gap: 145px;
     counter-reset: advantages;
   }
 
   .advantages__item {
     position: relative;
-    max-width: 250px;
+    padding-right: 40px;
     list-style: none;
   }
 
@@ -93,7 +95,7 @@
     color: #f2f2f2;
     font-size: 280px;
     line-height: 280px;
-    left: 118px;
+    right: 20px;
   }
 
   .advantages__description {
@@ -120,5 +122,14 @@
 
   .advantages__list {
     grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 75px;
+  }
+
+  .advantages__item {
+    padding-right: 5px;
+  }
+
+  .advantages__item::after {
+    right: 0;
   }
 }

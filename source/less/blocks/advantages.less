@@ -20,17 +20,50 @@
 
 .advantages__description {
   margin: 0;
+  min-height: 60px;
   padding-left: 80px;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-  white-space: preserve-breaks;
+  white-space: collapse;
+}
+
+.advantages__item {
+  position: relative;
+}
+
+.advantages__item::before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.advantages__item--benefit::before {
+  background-image: url("../img/leaf.svg");
+}
+
+.advantages__item--powder::before {
+  background-image: url("../img/water.svg");
+}
+
+.advantages__item--feed::before {
+  background-image: url("../img/fork-knife.svg");
+}
+
+.advantages__item--result::before {
+  background-image: url("../img/clock.svg");
 }
 
 @media (min-width: @tablet-width) {
   .advantages {
     padding: 45px 0 47px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   .advantages__title {
@@ -41,10 +74,28 @@
 
   .advantages__list {
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 37px;
+    grid-column-gap: 145px;
+    counter-reset: advantages;
   }
 
   .advantages__item {
-    min-width: 250px;
+    position: relative;
+    padding-right: 40px;
+    list-style: none;
+  }
+
+
+  .advantages__item::after {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    counter-increment: advantages;
+    content: counter(advantages);
+    color: #f2f2f2;
+    font-size: 280px;
+    line-height: 280px;
+    right: 20px;
   }
 
   .advantages__description {
@@ -52,14 +103,33 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  .advantages__item--benefit::before,
+  .advantages__item--feed::before,
+  .advantages__item--powder::before,
+  .advantages__item--result::before {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .advantages {
     padding: 71px 0 69px;
+    border: none;
   }
 
   .advantages__list {
     grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 75px;
+  }
+
+  .advantages__item {
+    padding-right: 5px;
+  }
+
+  .advantages__item::after {
+    right: 0;
   }
 }

@@ -100,10 +100,15 @@
 .extra__promo::before {
   content: " ";
   position: absolute;
-  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-bag.jpg") no-repeat;
+  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/gift-bg-mobile.jpg") no-repeat;
   object-fit: cover;
   inset: 0;
   z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-bg-mobile-2x.jpg");
+    background-size: 280px auto;
+  }
 }
 
 .extra__promo-text {
@@ -195,8 +200,12 @@
   }
 
   .extra__promo::before {
-    background-size: cover;
-    background-position-y: -330px;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/gift-bg-tablet.jpg") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-bg-tablet-2x.jpg");
+      background-size: 707px auto;
+    }
   }
 
   .extra__promo::after {
@@ -279,7 +288,12 @@
   }
 
   .extra__promo::before {
-    background-position-y: unset;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/gift-bg-desktop.jpg") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-bg-desktop-2x.jpg");
+      background-size: 245px auto;
+    }
   }
 
   .extra__promo-text {

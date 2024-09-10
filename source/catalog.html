@@ -6,6 +6,11 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon-apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body class="page__body">
@@ -13,10 +18,18 @@
       <div class="main-header__wrapper container">
         <div class="main-header__logo">
           <a class="main-header__logo-image-link">
-            <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип кот-супергерой">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/logo-image-desktop.svg" width="70" height="59">
+              <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg" width="60" height="50">
+              <img class=" main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип кот-супергерой">
+            </picture>
           </a>
           <a class="main-header__logo-text-link">
-            <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип Кэт энерджи">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/logo-text-desktop.svg" width="118" height="21">
+              <source media="(min-width: 768px)" srcset="img/logo-text-tablet.svg">
+              <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип Кэт энерджи">
+            </picture>
           </a>
         </div>
       </div>
@@ -50,7 +63,10 @@
           <ul class="products__list">
             <li class="products__list-item">
               <a class="products__image-link" href="#">
-                <img class="products__image" src="img/can-chicken-small.png" width="68" height="86" alt="Желтая банка корма Кэт Энерджи со вкусом курицы">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/can-chicken-small-tablet.png 1x, img/can-chicken-small-tablet-2x.png 2x" width="161" height="172">
+                  <img class="products__image" src="img/can-chicken-small.png" width="68" height="86" srcset="img/can-chicken-small-2x.png 2x" alt="Желтая банка корма Кэт Энерджи со вкусом курицы">
+                </picture>
               </a>
               <div class="products__info">
                 <a class="products__item-title" href="#">
@@ -83,7 +99,11 @@
             </li>
             <li class="products__list-item">
               <a class="products__image-link" href="#">
-                <img class="products__image" src="img/can-chicken-big.png" width="84" height="100" alt="Желтая банка корма Кэт Энерджи со вкусом курицы">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/can-chicken-big-desktop.png 1x, img/can-chicken-big-desktop-2x.png 2x" width="172" height="196">
+                  <source media="(min-width: 768px)" srcset="img/can-chicken-big-tablet.png 1x, img/can-chicken-big-tablet-2x.png 2x" width="168" height="206">
+                  <img class="products__image" src="img/can-chicken-big.png" width="84" height="100" srcset="img/can-chicken-big-2x.png 2x" alt="Желтая банка корма Кэт Энерджи со вкусом курицы">
+                </picture>
               </a>
               <div class="products__info">
                 <a class="products__item-title" href="#">
@@ -116,7 +136,10 @@
             </li>
             <li class="products__list-item">
               <a class="products__image-link" href="#">
-                <img class="products__image" src="img/can-fish-small.png" width="68" height="86" alt="Зеленая банка корма Кэт Энерджи со вкусом рыбы">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/can-fish-small-tablet.png 1x, img/can-fish-small-tablet-2x.png 2x" width="161" height="172">
+                  <img class="products__image" src="img/can-fish-small.png" width="68" height="86" srcset="img/can-fish-small-2x.png 2x" alt="Зеленая банка корма Кэт Энерджи со вкусом рыбы">
+                </picture>
               </a>
               <div class="products__info">
                 <a class="products__item-title" href="#">
@@ -149,7 +172,11 @@
             </li>
             <li class="products__list-item">
               <a class="products__image-link" href="#">
-                <img class="products__image" src="img/can-fish-big.png" width="84" height="100" alt="Зеленая банка корма Кэт Энерджи со вкусом рыбы">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/can-fish-big-desktop.png 1x, img/can-fish-big-desktop-2x.png 2x" width="172" height="196">
+                  <source media="(min-width: 768px)" srcset="img/can-fish-big-tablet.png 1x, img/can-fish-big-tablet-2x.png 2x" width="168" height="206">
+                  <img class="products__image" src="img/can-fish-big.png" width="84" height="100" srcset="img/can-fish-big-2x.png 2x" alt="Зеленая банка корма Кэт Энерджи со вкусом рыбы">
+                </picture>
               </a>
               <div class="products__info">
                 <a class="products__item-title">
@@ -182,7 +209,11 @@
             </li>
             <li class="products__list-item">
               <a class="products__image-link" href="#">
-                <img class="products__image" src="img/can-buckweat-small.png" width="68" height="86" alt="Голубая банка корма Кэт Энерджи со вкусом гречки">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/can-buckweat-small-tablet.png 1x, img/can-buckweat-small-tablet-2x.png 2x" width="161" height="172">
+                  <img class="products__image" src="img/can-buckweat-small.png" width="68" height="86" srcset="img/can-buckweat-small-2x.png 2x" alt="Голубая банка корма Кэт Энерджи со вкусом гречки">
+                </picture>
+
               </a>
               <div class="products__info">
                 <a class="products__item-title">
@@ -215,40 +246,46 @@
             </li>
             <li class="products__list-item">
               <a class="products__image-link" href="#">
-                <img class="products__image" src="img/can-buckweat-big.png" width="84" height="100" alt="Голубая банка корма Кэт Энерджи со вкусом гречки">
-              </a>
-              <div class="products__info">
-                <a class="products__item-title">
-                  Cat Energy<br> Slim 1000 г
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/can-buckweat-big-desktop.png 1x, img/can-buckweat-big-desktop-2x.png 2x" width="161" height="172">
+                  <source media="(min-width: 768px)" srcset="img/can-buckweat-big-tablet.png 1x, img/can-buckweat-big-tablet-2x.png 2x" width="168" height="206">
+                  <img class="products__image" src="img/can-buckweat-big.png" width="68" height="86" srcset="img/can-buckweat-big-2x.png 2x" alt="Голубая банка корма Кэт Энерджи со вкусом гречки">
+                </picture>
+                <div class="products__info">
+                  <a class="products__item-title">
+                    Cat Energy<br> Slim 1000 г
+                  </a>
+                  <dl class="products__item-params">
+                    <dt class="products__param-name">
+                      Масса
+                    </dt>
+                    <dd class="products__param-value">
+                      1000 г
+                    </dd>
+                    <dt class="products__param-name">
+                      Вкус
+                    </dt>
+                    <dd class="products__param-value">
+                      Гречка
+                    </dd>
+                    <dt class="products__param-name">
+                      Цена
+                    </dt>
+                    <dd class="products__param-value">
+                      1000 ₽
+                    </dd>
+                  </dl>
+                </div>
+                <a class="products__button button" href="#">
+                  Заказать
                 </a>
-                <dl class="products__item-params">
-                  <dt class="products__param-name">
-                    Масса
-                  </dt>
-                  <dd class="products__param-value">
-                    1000 г
-                  </dd>
-                  <dt class="products__param-name">
-                    Вкус
-                  </dt>
-                  <dd class="products__param-value">
-                    Гречка
-                  </dd>
-                  <dt class="products__param-name">
-                    Цена
-                  </dt>
-                  <dd class="products__param-value">
-                    1000 ₽
-                  </dd>
-                </dl>
-              </div>
-              <a class="products__button button" href="#">
-                Заказать
-              </a>
             </li>
             <li class="products__list-item">
               <a class="products__image-link" href="#">
-                <img class="products__image" src="img/can-rice-small.png" width="68" height="86" alt="Фиолетовая банка корма Кэт Энерджи со вкусом риса">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/can-rice-small-tablet.png 1x, img/can-rice-small-tablet-2x.png 2x" width="161" height="172">
+                  <img class="products__image" src="img/can-rice-small.png" width="68" height="86" srcset="img/can-rice-small-2x.png 2x" alt="Фиолетовая банка корма Кэт Энерджи со вкусом риса">
+                </picture>
               </a>
               <div class="products__info">
                 <a class="products__item-title">

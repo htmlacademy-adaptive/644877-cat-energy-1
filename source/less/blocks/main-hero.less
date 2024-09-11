@@ -6,11 +6,10 @@
   color: #ffffff;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/index-bg-mobile-2x.jpg");
-    background-size: 320px auto;
+    background: linear-gradient(rgba(104, 183, 56, 0.85) 300px, #ffffff 300px), url("../img/index-bg-mobile-2x.jpg") no-repeat;
+    background-size: 100%;
   }
 }
-
 
 .main-hero__title {
   margin: 0;
@@ -30,6 +29,7 @@
 
 .main-hero__image {
   display: block;
+  margin: 0 auto;
 }
 
 .main-hero__choose-button {
@@ -104,17 +104,16 @@
     width: 50vw;
     height: 694px;
     background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-bg-desktop.jpg") no-repeat;
-    top: -219px;
+    background-size: cover;
+    top: -227px;
     left: 50%;
     z-index: -1;
-    background-size: cover;
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/index-bg-desktop-2x.jpg");
-    background-size: 1040px auto;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-bg-desktop-2x.jpg") no-repeat;
+    background-size: 100%;
   }
-
 
   .main-hero__title {
     font-size: 60px;

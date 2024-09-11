@@ -275,7 +275,7 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 0 40px 60px;
+    padding: 0 70px 60px;
   }
 
   .form__label {
@@ -388,10 +388,11 @@
   .form__fieldset-title::after {
     content: " ";
     position: absolute;
-    border-bottom: 2px solid #ffffff;
+    background-color: #ffffff;
     width: calc(100% + 80px);
-    top: 50%;
-    transform: translateY(50%) translateX(-40px);
+    height: 100%;
+    top: 0;
+    transform: translateX(-40px);
     left: 0;
     z-index: -1;
   }

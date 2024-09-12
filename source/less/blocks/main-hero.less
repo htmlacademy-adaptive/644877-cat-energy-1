@@ -1,9 +1,14 @@
 .main-hero {
   padding-top: 27px;
-  background: linear-gradient(rgba(104, 183, 56, 0.85) 300px, #ffffff 300px), url("../img/index-bg-image.jpg") no-repeat;
+  background: linear-gradient(rgba(104, 183, 56, 0.85) 300px, #ffffff 300px), url("../img/index-bg-mobile.jpg") no-repeat;
   background-size: 100%;
   text-align: center;
   color: #ffffff;
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(rgba(104, 183, 56, 0.85) 300px, #ffffff 300px), url("../img/index-bg-mobile-2x.jpg") no-repeat;
+    background-size: 100%;
+  }
 }
 
 .main-hero__title {
@@ -24,6 +29,7 @@
 
 .main-hero__image {
   display: block;
+  margin: 0 auto;
 }
 
 .main-hero__choose-button {
@@ -36,12 +42,12 @@
 
 @media (min-width: @tablet-width) {
   .main-hero {
-    padding: 65px 0 0 90px;
+    padding: 65px 0 0;
     background-image: none;
   }
 
   .main-hero__wrapper {
-    padding-left: 90px;
+    padding-left: 120px;
     position: relative;
   }
 
@@ -97,11 +103,16 @@
     content: " ";
     width: 50vw;
     height: 694px;
-    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-background-desktop.jpg") no-repeat;
-    top: -219px;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-bg-desktop.jpg") no-repeat;
+    background-size: cover;
+    top: -227px;
     left: 50%;
     z-index: -1;
-    background-size: cover;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-bg-desktop-2x.jpg") no-repeat;
+    background-size: 100%;
   }
 
   .main-hero__title {
@@ -127,7 +138,7 @@
     height: 499px;
     top: -81px;
     z-index: -1;
-    transform: translateX(-140px);
+    transform: translateX(-162px);
     left: 50%;
   }
 }

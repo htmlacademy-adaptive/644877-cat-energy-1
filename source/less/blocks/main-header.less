@@ -29,14 +29,13 @@
   }
 }
 
-.main-header__logo-image-link,
-.main-header__logo-text-link {
+.main-header__logo-link {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.main-header__logo-text-link {
+.main-header__logo-text {
   margin-left: 56px;
 }
 
@@ -62,6 +61,10 @@
     width: auto;
     max-width: unset;
   }
+
+  .main-header__logo-text {
+    margin-left: 13px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -69,5 +72,9 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 55px 110px 0;
+  }
+
+  .main-header__logo-text {
+    margin-left: 14px;
   }
 }

@@ -133,19 +133,12 @@
   position: absolute;
   width: 18px;
   height: 13px;
-  background-image: url("../img/email.svg");
+  mask: url("../img/email.svg");
+  background-color: #000000;
   right: 16px;
-  top: 20px;
+  top: 21px;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.form__label--email:has(.form__input:focus)::after {
-  background-image: url("../img/email-focus.svg");
-}
-
-.form__label--email:has(.form__input:user-invalid)::after {
-  background-image: url("../img/email-error.svg");
 }
 
 .form__label--phone::after {
@@ -153,9 +146,20 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  background-image: url("../img/phone.svg");
+  mask: url("../img/phone.svg");
+  background-color: #000000;
   right: 16px;
   top: 19px;
+}
+
+.form__label--email:has(.form__input:focus)::after,
+.form__label--phone:has(.form__input:focus)::after {
+  background-color: #68b738;
+}
+
+.form__label--email:has(.form__input:user-invalid)::after,
+.form__label--phone:has(.form__input:user-invalid)::after {
+  background-color: #ff8282;
 }
 
 .form__fieldset--comment {

@@ -1,32 +1,17 @@
 .main-header {
-  padding: 13px 0;
+  padding-top: 13px;
 }
 
 .main-header__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  padding-bottom: 15px;
-  max-width: unset;
+  padding-bottom: 13px;
 }
 
-.main-header__logo {
-  width: 100%;
-  max-width: 280px;
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
-  flex-grow: 1px;
+.main-header__logo:has(:hover) {
+  opacity: 0.8;
+}
 
-  &:has(:hover) {
-    opacity: 0.8;
-  }
-
-  &:has(:active) {
-    opacity: 0.6;
-  }
+.main-header__logo:has(:active) {
+  opacity: 0.6;
 }
 
 .main-header__logo-link {
@@ -54,7 +39,7 @@
     justify-content: start;
     width: auto;
     margin: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .main-header__logo {

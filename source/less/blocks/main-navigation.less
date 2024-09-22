@@ -4,9 +4,10 @@
   flex-direction: column;
   padding-left: 0;
   list-style-type: none;
-  top: 65;
+  top: 65px;
   left: 0;
   width: 100%;
+  margin: 0;
 }
 
 .main-navigation__item {
@@ -24,19 +25,20 @@
   margin: 0;
   text-decoration: none;
   color: inherit;
+}
 
-  &:hover {
-    opacity: 0.6;
-  }
+.main-navigation__link:hover {
+  opacity: 0.6;
+}
 
-  &:disabled {
-    opacity: 0.3;
-  }
+.main-navigation__link:disabled {
+  opacity: 0.3;
 }
 
 .main-navigation__toggle {
-  position: relative;
-  display: block;
+  position: absolute;
+  right: 20px;
+  top: 21px;
   padding: 0;
   width: 24px;
   height: 24px;
@@ -49,9 +51,6 @@
   .main-navigation__list {
     background-color: #ffffff;
     border-top: 1px solid  #e6e6e6;
-  }
-
-  .main-navigation__item {
     display: none;
   }
 
@@ -74,44 +73,39 @@
     margin-bottom: 0;
   }
 
-  .main-navigation--opened,
-  .main-navigation--nojs {
-    & .main-navigation__item {
-      display: block;
-    }
+  .main-navigation--opened .main-navigation__list,
+  .main-navigation--nojs .main-navigation__list {
+    display: flex;
   }
 
   .main-navigation--nojs {
     flex-basis: 100%;
     margin: 0;
-    margin-bottom: -14px;
-
-    & .main-navigation__toggle {
-      display: none;
-    }
   }
 
-  .main-navigation--opened {
-    & .main-navigation__toggle {
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 25px;
-        height: 1.5px;
-        background-color: #000000;
-      }
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
 
-      &::before {
-        transform: rotate(45deg);
-        box-shadow: none;
-      }
+  .main-navigation--opened .main-navigation__toggle {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 25px;
+      height: 1.5px;
+      background-color: #000000;
+    }
 
-      &::after {
-        transform: rotate(-45deg);
-      }
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
     }
   }
 }

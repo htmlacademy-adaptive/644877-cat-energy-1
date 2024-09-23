@@ -31,7 +31,7 @@
           </a>
         </div>
       </div>
-      <nav class="main-header__navigation main-navigation main-navigation--nojs">
+      <nav class="main-header__navigation main-navigation main-navigation--nojs"><!-- класс .main-navigation--opened открывает меню -->
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -69,15 +69,15 @@
             <h3 class="visually-hidden form__fieldset-title">Информация о коте</h3>
             <label class="form__label">
               Имя:*
-              <input class="form__input" type="text" name="name" value="" placeholder="Кекс" required>
+              <input class="form__input" type="text" name="name" value="" placeholder="Барсик" required>
             </label>
             <label class="form__label">
               Вес (кг):*
-              <input class="form__input" type="text" name="weight" value="" placeholder="5" required>
+              <input class="form__input" type="text" name="weight" value="" placeholder="7" required>
             </label>
             <label class="form__label">
               Возраст (лет):
-              <input class="form__input" type="text" name="age" value="" placeholder="5">
+              <input class="form__input" type="text" name="age" value="" placeholder="7">
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--goal">
@@ -104,17 +104,17 @@
           <div class="form__contacts">
             <label class="form__label form__label--email">
               E-mail:*
-              <input class="form__input" type="email" name="owner-email" value="" placeholder="ivanov@gmail.com" required>
+              <input class="form__input" type="email" name="owner-email" value="" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="form__label form__label--phone">
               Телефон:*
-              <input class="form__input" type="text" name="owner-phone" value="" placeholder="8 (858)858-85-85" required>
+              <input class="form__input" type="text" name="owner-phone" value="" placeholder="8 (960) 900-60-90" required>
             </label>
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--comment">
           <h3 class="form__fieldset-title">
-            Коментарий
+            Комментарий
           </h3>
           <textarea class="form__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
@@ -154,9 +154,10 @@
           <h3 class="contacts__address-title">Приглашаем
             к&nbsp;сотрудничеству
             дилеров!</h3>
-          <span class="contacts__address-description">ул. Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург</span>
+          <div class="contacts__address-description">
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <span>Санкт-Петербург</span>
+          </div>
         </div>
         <iframe class="contacts__map contacts__map--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224469757479!2d30.314833977459894!3d59.96826865971351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1726077427758!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Изображение карты"></iframe>
         <div class="main-footer__wrapper container">

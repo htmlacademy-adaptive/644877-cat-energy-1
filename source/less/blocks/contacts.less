@@ -22,6 +22,8 @@
 }
 
 .contacts__address-description {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   color: #444444;
   font-family: "Lato", "Calibri", sans-serif;
@@ -51,7 +53,7 @@
 @media (min-width: @tablet-width) {
   .contacts__address {
     grid-template-columns: 1fr 314px 314px 1fr;
-    padding: 60px 70px;
+    padding: 58px 70px 64px;
   }
 
   .contacts__address-title {
@@ -65,6 +67,7 @@
     justify-self: end;
     text-align: end;
     font-size: 16px;
+    justify-content: space-between;
   }
 
   .contacts__map {
@@ -96,7 +99,7 @@
     left: 110px;
     width: auto;
     gap: 87px;
-    padding: 60px 74px 60px 80px;
+    padding: 57px 74px 62px 80px;
     background-color: #ffffff;
     z-index: 3;
   }

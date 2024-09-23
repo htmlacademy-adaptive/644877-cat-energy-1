@@ -225,8 +225,7 @@
   height: 26px;
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
-  background-position-y: center;
-  left: 6px;
+  background-position: center;
 }
 
 .form__checkbox:hover::before,
@@ -265,6 +264,7 @@
   margin: 0;
   font-size: 24px;
   line-height: 26px;
+  letter-spacing: -0.7px;
 }
 
 .form__fieldset-title::before {
@@ -279,7 +279,7 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 0 70px 60px;
+    padding: 0 70px 68px;
   }
 
   .form__label {
@@ -291,6 +291,7 @@
     height: 52px;
     font-size: 20px;
     line-height: 30px;
+    padding-left: 20px;
   }
 
   .form__cat-info {
@@ -305,6 +306,10 @@
   .form__fieldset--goal {
     padding: 23px 27px 27px;
     border: 1px solid #e7e7e7;
+  }
+
+  .form__fieldset--goal .form__label {
+    gap: 20px;
   }
 
   .form__fieldset--cat::after,
@@ -343,6 +348,7 @@
     min-height: 175px;
     font-size: 20px;
     line-height: 30px;
+    padding: 8px 20px;
   }
 
   .form__fieldset--extra {
@@ -353,7 +359,26 @@
   .form__checkbox-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 32px;
+    grid-row-gap: 30px;
+    grid-column-gap: 60px;
+  }
+
+  .form__checkbox {
+    font-size: 20px;
+    line-height: 30px;
+    gap: 20px;
+  }
+
+  .form__checkbox::before,
+  .form__checkbox::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__checkbox:has(.form__input:checked)::after {
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/tick-tablet.svg");
   }
 
   .form__submit {
@@ -363,6 +388,8 @@
   }
 
   .form__button {
+    font-size: 20px;
+    line-height: 31px;
     width: 284px;
   }
 
@@ -376,6 +403,7 @@
     font-size: 36px;
     line-height: 36px;
     align-self: start;
+    letter-spacing: -0.8px;
   }
 
   .form__fieldset-title::before {
@@ -404,7 +432,7 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    padding: 0 110px 79px;
+    padding: 0 110px 83px;
   }
 
   .form__fieldset {
@@ -463,8 +491,9 @@
   }
 
   .form__checkbox-list {
-    grid-auto-flow: column;
-    grid-template-columns: unset;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 81px;
+    justify-items: start;
   }
 
   .form__submit {

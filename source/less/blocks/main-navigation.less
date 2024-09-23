@@ -18,6 +18,7 @@
   padding-bottom: 24px;
   text-align: center;
   border-bottom: 1px solid #e6e6e6;
+  background-color: #ffffff;
 }
 
 .main-navigation__link {
@@ -76,6 +77,7 @@
   .main-navigation--opened .main-navigation__list,
   .main-navigation--nojs .main-navigation__list {
     display: flex;
+    z-index: 1;
   }
 
   .main-navigation--nojs {
@@ -134,13 +136,14 @@
     border: none;
     font-size: 18px;
     line-height: 24px;
+    background-color: transparent;
   }
 
   .main-navigation__link--current::after {
     content: " ";
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -8px;
     width: 100%;
     border-bottom: 2px solid #68b738;
   }

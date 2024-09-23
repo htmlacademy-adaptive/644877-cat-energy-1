@@ -135,8 +135,8 @@
   height: 14px;
   mask: url("../img/email.svg");
   background-color: #000000;
-  right: 16px;
-  top: 21px;
+  right: 13px;
+  top: 17px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -148,8 +148,8 @@
   height: 16px;
   mask: url("../img/phone.svg");
   background-color: #000000;
-  right: 16px;
-  top: 19px;
+  right: 14px;
+  top: 16px;
 }
 
 .form__label--email:has(.form__input:focus)::after,
@@ -264,7 +264,7 @@
   margin: 0;
   font-size: 24px;
   line-height: 26px;
-  letter-spacing: -0.7px;
+  font-weight: 400;
 }
 
 .form__fieldset-title::before {
@@ -279,7 +279,7 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 0 70px 68px;
+    padding: 0 70px 65px;
   }
 
   .form__label {
@@ -373,6 +373,7 @@
   .form__checkbox::after {
     width: 40px;
     height: 40px;
+    flex-shrink: 0;
   }
 
   .form__checkbox:has(.form__input:checked)::after {
@@ -403,7 +404,6 @@
     font-size: 36px;
     line-height: 36px;
     align-self: start;
-    letter-spacing: -0.8px;
   }
 
   .form__fieldset-title::before {

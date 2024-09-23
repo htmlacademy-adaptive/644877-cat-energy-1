@@ -62,7 +62,7 @@
   margin-top: 0;
   font-size: 16px;
   line-height: 20px;
-  letter-spacing: -0.6px;
+  font-weight: 400;
 }
 
 .products__item-title-link {
@@ -71,11 +71,15 @@
   color: #222222;
   max-width: 76px;
   display: block;
+  max-height: 2lh;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .products__item-params {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 0;
   margin-bottom: 4px;
   font-family: "Lato", "Calibri", sans-serif;
   font-size: 12px;
@@ -125,6 +129,9 @@
   text-align: center;
   color: #111111;
   text-transform: uppercase;
+  max-height: 4lh;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .products__more-description {
@@ -180,7 +187,6 @@
   .products__item-title-link {
     max-width: 140px;
     margin: 0 auto;
-    letter-spacing: -0.4px;
   }
 
   .products__item-params {
@@ -203,7 +209,7 @@
   }
 
   .products__info {
-    margin-bottom: 0;
+    margin-bottom: 34px;
     justify-content: start;
   }
 

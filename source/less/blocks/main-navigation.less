@@ -150,6 +150,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-navigation {
+    flex-basis: 50%;
+  }
+
   .main-navigation__list--index {
     color: #ffffff;
   }
@@ -160,11 +164,13 @@
 
   .main-navigation__list {
     gap: 35px;
+    justify-content: end;
   }
 
   .main-navigation__item {
     font-size: 20px;
     line-height: 30px;
+    padding: 16px 0;
   }
 
   .main-navigation__link:hover {

@@ -129,9 +129,6 @@
   text-align: center;
   color: #111111;
   text-transform: uppercase;
-  max-height: 4lh;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .products__more-description {
@@ -220,7 +217,7 @@
   .products__more {
     margin-bottom: 0;
     padding: 40px 37px;
-    height: 429px;
+    min-height: 429px;
     align-self: end;
     border: 2px solid #f2f2f2;
     gap: 23px;
@@ -261,7 +258,7 @@
   }
 
   .products__list-item {
-    grid-template-rows: 213px max-content 40px;
+    grid-template-rows: 213px max-content max-content;
     grid-row-gap: 9px;
   }
 

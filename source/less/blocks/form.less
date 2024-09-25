@@ -28,7 +28,7 @@
   flex: 1;
   height: 45px;
   min-width: 0;
-  padding-left: 15px;
+  padding: 0 45px 0 15px;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
@@ -90,6 +90,7 @@
   height: 30px;
   border: 1px solid #cdcdcd;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .form__label:has(.form__radio):hover::before,
@@ -111,6 +112,7 @@
   position: absolute;
   width: 13px;
   height: 13px;
+  flex-shrink: 0;
   background-color: #68b738;
   border-radius: 50%;
   top: 9px;
@@ -220,6 +222,7 @@
   display: block;
   width: 30px;
   height: 30px;
+  flex-shrink: 0;
   border: 1px solid #cdcdcd;
 }
 
@@ -228,6 +231,7 @@
   position: absolute;
   width: 30px;
   height: 30px;
+  flex-shrink: 0;
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -336,7 +340,8 @@
   .form__label:has(.form__radio:checked)::after {
     width: 18px;
     height: 18px;
-    top: 11px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 11px;
   }
 
@@ -454,6 +459,8 @@
   .form__label {
     font-size: 20px;
     line-height: 30px;
+    max-width: 100%;
+    text-wrap: auto;
   }
 
   .form__input {
@@ -468,11 +475,13 @@
 
   .form__fieldset--cat {
     flex-basis: 50%;
+    max-width: 50%;
   }
 
   .form__fieldset--goal {
     padding: 25px 28px;
     flex-basis: 50%;
+    max-width: 50%;
   }
 
   .form__label--email {

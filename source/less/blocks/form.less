@@ -15,7 +15,6 @@
 .form__label {
   position: relative;
   display: flex;
-  white-space: nowrap;
   align-items: center;
   gap: 13px;
   font-size: 16px;
@@ -28,7 +27,7 @@
   flex: 1;
   height: 45px;
   min-width: 0;
-  padding-left: 15px;
+  padding: 0 45px 0 15px;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
@@ -90,11 +89,17 @@
   height: 30px;
   border: 1px solid #cdcdcd;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .form__label:has(.form__radio):hover::before,
 .form__label:has(.form__radio[disabled])::before {
   border-color: #bababa;
+}
+
+.form__label:has(.form__radio:focus)::before {
+  outline: 2px solid #0000ff;
+  outline-offset: 2px;
 }
 
 .form__label:has(.form__radio[disabled]) {
@@ -106,9 +111,11 @@
   position: absolute;
   width: 13px;
   height: 13px;
+  flex-shrink: 0;
   background-color: #68b738;
   border-radius: 50%;
-  top: 9px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 9px;
 }
 
@@ -215,14 +222,16 @@
   display: block;
   width: 30px;
   height: 30px;
+  flex-shrink: 0;
   border: 1px solid #cdcdcd;
 }
 
 .form__checkbox:has(.form__input:checked)::after {
   content: " ";
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -231,6 +240,11 @@
 .form__checkbox:hover::before,
 .form__checkbox:has([disabled])::before {
   border-color: #bababa;
+}
+
+.form__checkbox:has(.form__input:focus)::before {
+  outline: 2px solid #0000ff;
+  outline-offset: 2px;
 }
 
 .form__checkbox:has([disabled]) {
@@ -265,6 +279,7 @@
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+  max-width: min-content;
 }
 
 .form__fieldset-title::before {
@@ -272,7 +287,7 @@
   position: absolute;
   border-bottom: 2px solid #68b738;
   width: 300vw;
-  top: 50%;
+  top: 16px;
   left: 100%;
   margin-left: 20px;
 }
@@ -325,7 +340,6 @@
   .form__label:has(.form__radio:checked)::after {
     width: 18px;
     height: 18px;
-    top: 11px;
     left: 11px;
   }
 
@@ -404,6 +418,7 @@
     font-size: 36px;
     line-height: 36px;
     align-self: start;
+    max-width: unset;
   }
 
   .form__fieldset-title::before {
@@ -412,7 +427,7 @@
     width: 300vw;
     border-bottom: 2px solid #68b738;
     transform: translateY(50%) translateX(-50%);
-    top: 50%;
+    top: 20px;
     left: 0;
     z-index: -2;
   }
@@ -442,6 +457,7 @@
   .form__label {
     font-size: 20px;
     line-height: 30px;
+    max-width: 100%;
   }
 
   .form__input {
@@ -456,11 +472,13 @@
 
   .form__fieldset--cat {
     flex-basis: 50%;
+    max-width: 50%;
   }
 
   .form__fieldset--goal {
     padding: 25px 28px;
     flex-basis: 50%;
+    max-width: 50%;
   }
 
   .form__label--email {

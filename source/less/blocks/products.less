@@ -71,9 +71,6 @@
   color: #222222;
   max-width: 76px;
   display: block;
-  max-height: 2lh;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .products__item-params {
@@ -154,7 +151,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 210px 168px 40px;
+    grid-template-rows: 210px max-content max-content;
     grid-row-gap: 20px;
     padding: 10px 37px 40px;
     background: linear-gradient(#ffffff 82px, #f2f2f2 82px 511px);

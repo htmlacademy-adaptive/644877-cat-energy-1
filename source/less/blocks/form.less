@@ -15,7 +15,6 @@
 .form__label {
   position: relative;
   display: flex;
-  white-space: nowrap;
   align-items: center;
   gap: 13px;
   font-size: 16px;
@@ -115,7 +114,8 @@
   flex-shrink: 0;
   background-color: #68b738;
   border-radius: 50%;
-  top: 9px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 9px;
 }
 
@@ -340,8 +340,6 @@
   .form__label:has(.form__radio:checked)::after {
     width: 18px;
     height: 18px;
-    top: 50%;
-    transform: translateY(-50%);
     left: 11px;
   }
 
@@ -460,7 +458,6 @@
     font-size: 20px;
     line-height: 30px;
     max-width: 100%;
-    text-wrap: auto;
   }
 
   .form__input {
